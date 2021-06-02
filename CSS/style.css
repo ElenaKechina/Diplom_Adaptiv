@@ -703,7 +703,7 @@ nav.nav {
 
 .count {
 	position: relative;
-	bottom: 3;
+	bottom: 3px;
 	margin-left: 3px;
 	font-size: 12px;
 	font-weight: 700;
