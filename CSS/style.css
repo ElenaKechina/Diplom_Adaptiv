@@ -1,3 +1,14 @@
+/*.test {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 768px;
+	height: 5230px;
+	background-image: url(../mq-diploma-master/mq-diploma-master/sources/NOEMI_mq_tablet.jpg);
+	z-index: 9000;
+	opacity: 0.5;
+}
+/*
 /* Подключаем шрифты*/
 
 /*
@@ -11,6 +22,7 @@
 }
 
 @font-face {
+
 	font-family: 'OpenSans';
 	src: local("OpenSans"), 
 	url("../fonts/OpenSans-Bold.woff2") format("woff2"), 
@@ -441,8 +453,8 @@ nav.nav {
 	text-decoration: underline;
 }
 
-.main-nav_link:nth-of-type(n+2) {
-	margin-left: 20px;
+.main-nav_link:nth-of-type(n-1) {
+	margin-right: 20px;
 }
 
 .main-title {
@@ -905,10 +917,10 @@ button.shop-button {
 		background-image: url(../img/banner-bg-tablet.jpg);
 	}
 	nav.nav {
-		padding-top: 42px;
+		padding-top: calc( 42px + (27 - 42) * ((100vw - 768px) / (1201 - 768)));
 	}
 	.logo {
-		width: 158px;
+		width: calc( 158px + (181 - 158) * ((100vw - 768px) / (1201 - 768)));
 	}
 	.nav-menu {
 		display: none;
@@ -917,12 +929,12 @@ button.shop-button {
 		display: block;
 	}
 	.nav-title {
-		margin: 88px auto 0 auto;
-		padding-bottom: 112px;
-		padding-left: 32px;
-		padding-right: 32px;
+		margin: calc( 88px + (181 - 88) * ((100vw - 768px) / (1201 - 768))) auto 0 auto;
+		padding-bottom: calc( 112px + (206 - 112) * ((100vw - 768px) / (1201 - 768)));
+		padding-left: calc( 32px + (38 - 32) * ((100vw - 768px) / (1201 - 768)));
+		padding-right: calc( 32px + (38 - 32) * ((100vw - 768px) / (1201 - 768)));
 		width: auto;
-		font-size: 40px;
+		font-size: calc( 40px + (45 - 40) * ((100vw - 768px) / (1201 - 768)));
 		line-height: calc(55 / 40);
 	}
 	/* Trends*/
@@ -937,9 +949,8 @@ button.shop-button {
 		margin-top: 0.5%;
 	}
 	.trends-content {
-		padding: 30px;
-		padding-bottom: 28px;
-		padding-top: 32px;
+		padding: 8%;
+		padding-bottom: 7.5%;
 	}
 	.trends-text {
 		margin-top: 9px;
@@ -964,9 +975,6 @@ button.shop-button {
 	.main-text {
 		margin-top: 13px;
 		margin-left: 0px;
-	}
-	.main-nav_link:nth-of-type(n+2) {
-		margin-left: 20px;
 	}
 	.main-title {
 		margin-top: 10px;
@@ -1017,8 +1025,8 @@ button.shop-button {
 		margin-top: 25px;
 	}
 	.shop-image {
-		width: 289px;
-		height: 226px;
+		width: 85.665%;
+		height: calc( 226px + (500 - 226) * ((100vw - 768px) / (1660 - 768)));
 	}
 	.shop-content {
 		padding: 50px 20px 30px;
@@ -1041,8 +1049,8 @@ button.shop-button {
 		margin-top: 48px;
 	}
 }
-/*
-@media (min-height: 641px) and (max-height: 1200px) and (orientation: landscape) {
+
+@media (min-height: 641px) and (max-height: 1200px) and (max-width: 1200px) and (orientation: landscape) {
 	.trends-card {
 		flex: 0 0 24.77777%;
 		;
@@ -1050,8 +1058,11 @@ button.shop-button {
 	.trends-card:nth-of-type(n+3) {
 		margin-top: 0;
 	}
+	.trends-text {
+		font-size: calc( 13px + (20 - 13) * ((100vw - 642px) / (1201 - 642)));
+	}
 }
-*/
+
 /*_______________________*/
 
 /*_______mobile__________*/
@@ -1059,11 +1070,6 @@ button.shop-button {
 /*_______________________*/
 
 @media (max-width: 640px) {
-	.test {
-		background-image: url(../mq-diploma-master/mq-diploma-master/sources/NOEMI_mq_mobile.jpg);
-		width: 360px;
-		height: 7464px;
-	}
 	p:nth-of-type(n+2) {
 		margin-top: 4px;
 	}
@@ -1120,7 +1126,7 @@ button.shop-button {
 		justify-content: flex-end;
 	}
 	nav.nav {
-		padding-top: 31px;
+		padding-top: calc( 31px + (42 - 31) * ((100vw - 360px) / (768 - 360)));
 	}
 	.logo {
 		position: absolute;
@@ -1129,7 +1135,7 @@ button.shop-button {
 		margin-right: auto;
 		left: 0;
 		right: 0;
-		width: 268px;
+		width: calc( 268px + (620 - 268) * ((100vw - 360px) / (768 - 360)));
 	}
 	.nav-menu {
 		display: none;
@@ -1138,17 +1144,17 @@ button.shop-button {
 		display: block;
 	}
 	.nav-title {
-		margin: 273px auto 0 auto;
-		padding-bottom: 211px;
+		margin: calc( 273px + (450 - 273) * ((100vw - 360px) / (768 - 360))) auto 0 auto;
+		padding-bottom: calc( 211px + (550 - 211) * ((100vw - 360px) / (768 - 360)));
 		width: auto;
 		padding-left: 3.9%;
 		padding-right: 3.9%;
-		font-size: 26px;
+		font-size: calc( 26px + (40 - 26) * ((100vw - 360px) / (768 - 360)));
 		line-height: calc(36 / 26);
 	}
 	/* Trends*/
 	.trends {
-		margin-top: 42px;
+		margin-top: calc( 42px + (45 - 42) * ((100vw - 360px) / (768 - 360)));
 	}
 	.trends-cards {
 		flex-direction: column;
@@ -1156,27 +1162,26 @@ button.shop-button {
 	}
 	.trends-card {
 		flex: 0 0 auto;
-		height: 230px;
+		height: calc( 230px + (450 - 230) * ((100vw - 360px) / (768 - 360)));
 	}
 	.trends-card:nth-of-type(n+2) {
 		margin-top: 4px;
 	}
 	.trends-content {
-		bottom: 15px;
-		left: 16px;
-		right: 15px;
-		padding: 18px;
-		padding-bottom: 26px;
-		padding-top: 31px;
+		left: calc( 16px + (20 - 16) * ((100vw - 360px) / (768 - 360)));
+		right: calc( 15px + (20 - 15) * ((100vw - 360px) / (768 - 360)));
+		padding: 5%;
+		padding-bottom: 7%;
+		padding-top: 8.5%;
 	}
 	.trends-text {
-		margin-top: 10px;
+		margin-top: calc( 10px + (9 - 10) * ((100vw - 360px) / (768 - 360)));
 		line-height: 125%;
-		font-size: 16px;
+		font-size: calc( 16px + (17 - 16) * ((100vw - 360px) / (768 - 360)));
 	}
 	/*стилизуем главный блок. */
 	.page {
-		margin-top: 45px;
+		margin-top: calc( 45px + (49 - 45) * ((100vw - 360px) / (768 - 360)));
 		flex-direction: column;
 	}
 	.article-main {
@@ -1193,16 +1198,16 @@ button.shop-button {
 		margin-left: 0px;
 		margin-top: 13px;
 	}
-	.main-nav_link:nth-of-type(n+2) {
+	/*	.main-nav_link:nth-of-type(n+2) {
 		margin-left: 18px;
-	}
+	}*/
 	.main-title {
 		margin-top: 9px;
-		font-size: 16px;
+		font-size: calc( 16px + (17 - 16) * ((100vw - 360px) / (768 - 360)));
 		line-height: calc(20 / 16);
 	}
 	.main-title_footer {
-		margin-top: 19px;
+		margin-top: calc( 19px + (32 - 19) * ((100vw - 360px) / (768 - 360)));
 	}
 	.autor {
 		margin-left: 13px;
@@ -1255,7 +1260,7 @@ button.shop-button {
 	/*Темы*/
 	/*store*/
 	.shop {
-		margin-top: 44px;
+		margin-top: calc( 44px + (64 - 44) * ((100vw - 360px) / (768 - 360)));
 	}
 	.shop-cards {
 		margin-top: 41px;
@@ -1269,7 +1274,7 @@ button.shop-button {
 	}
 	.shop-image {
 		width: 85%;
-		height: 283px;
+		height: calc( 283px + (600 - 283) * ((100vw - 360px) / (768 - 360)));
 	}
 	.shop-content {
 		padding: 51px 23px 28px 18px;
@@ -1292,8 +1297,8 @@ button.shop-button {
 		margin-top: 48px;
 	}
 }
-/*
-@media (max-height: 640px) and (orientation: landscape) {
+
+@media (max-height: 640px) and (max-width: 640px) and (orientation: landscape) {
 	.trends-cards {
 		flex-direction: row;
 		justify-content: space-between;
@@ -1307,4 +1312,7 @@ button.shop-button {
 	.trends-card:nth-of-type(n+3) {
 		margin-top: 0.5%;
 	}
-}*/
+	.trends-text {
+		font-size: calc( 13px + (17 - 13) * ((100vw - 320px) / (640 - 320)));
+	}
+}
